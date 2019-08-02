@@ -3,25 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		029906064202AD5352F3B3DE /* GuestPresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3922E0796F18451E22994D2A /* GuestPresenterType.swift */; };
+		0AF88A060B445D135E40F906 /* GuestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6B06CFDB05E7CF9D848FA /* GuestNavigator.swift */; };
+		148D4A5B57DC5D24A0844C10 /* GuestViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F2F4C5C28BF575E05E4E7 /* GuestViewType.swift */; };
+		4216B7514A47D49ED09391F4 /* GuestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A28E752CFEF4833F552500 /* GuestAssembly.swift */; };
+		60CD004877BE1C4B3871EABF /* GuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AD97D9D050F263A8782D2E /* GuestPresenter.swift */; };
+		706D4B0822F198D500386534 /* GoogleApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D4B0722F198D500386534 /* GoogleApplicationService.swift */; };
+		706D4B0A22F1990500386534 /* RootApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D4B0922F1990500386534 /* RootApplicationService.swift */; };
+		706D4B0D22F1B70E00386534 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D4B0C22F1B70E00386534 /* Navigator.swift */; };
+		706D4B0F22F1B7D400386534 /* GuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D4B0E22F1B7D400386534 /* GuestView.swift */; };
+		706D4B1322F1B93500386534 /* MPRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D4B1222F1B93500386534 /* MPRoundedButton.swift */; };
+		706D4B1622F1C38200386534 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D4B1522F1C38200386534 /* UIColor+Additions.swift */; };
 		709307DA22F02D8D007CB902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709307D922F02D8D007CB902 /* AppDelegate.swift */; };
-		709307DC22F02D8D007CB902 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709307DB22F02D8D007CB902 /* ViewController.swift */; };
-		709307DF22F02D8D007CB902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709307DD22F02D8D007CB902 /* Main.storyboard */; };
 		709307E122F02D8F007CB902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709307E022F02D8F007CB902 /* Assets.xcassets */; };
 		709307E422F02D8F007CB902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709307E222F02D8F007CB902 /* LaunchScreen.storyboard */; };
+		709307ED22F02DBA007CB902 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709307EC22F02DB9007CB902 /* GoogleService-Info.plist */; };
+		70F37CCC22F1D33900C5D482 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70F37CCE22F1D33900C5D482 /* Localizable.strings */; };
+		70F37CD222F1D38900C5D482 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F37CD122F1D38900C5D482 /* StringExtension.swift */; };
+		93D0F95A9B41A860C501BE42 /* GuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8EED307FAA6D475198164B /* GuestViewController.swift */; };
+		BD4081FC1B98513FAFB4BD99 /* Pods_Avitogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D8D13766C19A866BA180B6 /* Pods_Avitogram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32721E6679C119FE86C7A20C /* Pods-Avitogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avitogram.release.xcconfig"; path = "Target Support Files/Pods-Avitogram/Pods-Avitogram.release.xcconfig"; sourceTree = "<group>"; };
+		3922E0796F18451E22994D2A /* GuestPresenterType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestPresenterType.swift; sourceTree = "<group>"; };
+		42D8D13766C19A866BA180B6 /* Pods_Avitogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Avitogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		704F2F4C5C28BF575E05E4E7 /* GuestViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestViewType.swift; sourceTree = "<group>"; };
+		706D4B0722F198D500386534 /* GoogleApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApplicationService.swift; sourceTree = "<group>"; };
+		706D4B0922F1990500386534 /* RootApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApplicationService.swift; sourceTree = "<group>"; };
+		706D4B0C22F1B70E00386534 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Navigator.swift; path = ../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Core/Navigator.swift; sourceTree = "<group>"; };
+		706D4B0E22F1B7D400386534 /* GuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuestView.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Modules/Guest/View/GuestView.swift; sourceTree = "<group>"; };
+		706D4B1222F1B93500386534 /* MPRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MPRoundedButton.swift; path = ../../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Components/Buttons/MPRoundedButton.swift; sourceTree = "<group>"; };
+		706D4B1522F1C38200386534 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Additions.swift"; path = "../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Extensions/UIColor+Additions.swift"; sourceTree = "<group>"; };
 		709307D622F02D8D007CB902 /* Avitogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avitogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709307D922F02D8D007CB902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		709307DB22F02D8D007CB902 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		709307DE22F02D8D007CB902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		709307E022F02D8F007CB902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		709307E322F02D8F007CB902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		709307E522F02D8F007CB902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709307EC22F02DB9007CB902 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70F37CCD22F1D33900C5D482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		70F37CCF22F1D35300C5D482 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		70F37CD022F1D35300C5D482 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		70F37CD122F1D38900C5D482 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = ../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		7AB6B06CFDB05E7CF9D848FA /* GuestNavigator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestNavigator.swift; sourceTree = "<group>"; };
+		A1AD97D9D050F263A8782D2E /* GuestPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestPresenter.swift; sourceTree = "<group>"; };
+		CE8EED307FAA6D475198164B /* GuestViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestViewController.swift; sourceTree = "<group>"; };
+		E5A28E752CFEF4833F552500 /* GuestAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestAssembly.swift; sourceTree = "<group>"; };
+		E97151C0118D66931227CFDF /* Pods-Avitogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avitogram.debug.xcconfig"; path = "Target Support Files/Pods-Avitogram/Pods-Avitogram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +61,83 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4081FC1B98513FAFB4BD99 /* Pods_Avitogram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2501C54DCACE0A97FDA3888D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E97151C0118D66931227CFDF /* Pods-Avitogram.debug.xcconfig */,
+				32721E6679C119FE86C7A20C /* Pods-Avitogram.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		55C089BB788700371CAC12B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				704F2F4C5C28BF575E05E4E7 /* GuestViewType.swift */,
+				3922E0796F18451E22994D2A /* GuestPresenterType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		706D4B0622F1977600386534 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				706D4B1422F1C36A00386534 /* Extensions */,
+				706D4B1022F1B90F00386534 /* Components */,
+				706D4B0B22F1B6E400386534 /* Core */,
+				709307EB22F02DA8007CB902 /* Application */,
+				9E193821BD2268546FC8DDE1 /* Modules */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		706D4B0B22F1B6E400386534 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				706D4B0C22F1B70E00386534 /* Navigator.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		706D4B1022F1B90F00386534 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				706D4B1122F1B91700386534 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		706D4B1122F1B91700386534 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				706D4B1222F1B93500386534 /* MPRoundedButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		706D4B1422F1C36A00386534 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				706D4B1522F1C38200386534 /* UIColor+Additions.swift */,
+				70F37CD122F1D38900C5D482 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		709307CD22F02D8D007CB902 = {
 			isa = PBXGroup;
 			children = (
 				709307D822F02D8D007CB902 /* Avitogram */,
 				709307D722F02D8D007CB902 /* Products */,
+				2501C54DCACE0A97FDA3888D /* Pods */,
+				F7487B88A7A5F03807B85307 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +152,69 @@
 		709307D822F02D8D007CB902 /* Avitogram */ = {
 			isa = PBXGroup;
 			children = (
-				709307D922F02D8D007CB902 /* AppDelegate.swift */,
-				709307DB22F02D8D007CB902 /* ViewController.swift */,
-				709307DD22F02D8D007CB902 /* Main.storyboard */,
 				709307E022F02D8F007CB902 /* Assets.xcassets */,
 				709307E222F02D8F007CB902 /* LaunchScreen.storyboard */,
-				709307E522F02D8F007CB902 /* Info.plist */,
+				709307EC22F02DB9007CB902 /* GoogleService-Info.plist */,
+				706D4B0622F1977600386534 /* Source */,
 			);
 			path = Avitogram;
+			sourceTree = "<group>";
+		};
+		709307EB22F02DA8007CB902 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				70A9E6D122F18CDF00803731 /* AppDelegateServices */,
+				709307D922F02D8D007CB902 /* AppDelegate.swift */,
+				709307E522F02D8F007CB902 /* Info.plist */,
+				70F37CCE22F1D33900C5D482 /* Localizable.strings */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		70A9E6D122F18CDF00803731 /* AppDelegateServices */ = {
+			isa = PBXGroup;
+			children = (
+				706D4B0922F1990500386534 /* RootApplicationService.swift */,
+				706D4B0722F198D500386534 /* GoogleApplicationService.swift */,
+			);
+			path = AppDelegateServices;
+			sourceTree = "<group>";
+		};
+		9E193821BD2268546FC8DDE1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F0276F4DA30EB7E5241AF639 /* Guest */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B9591D7BA5D35FD0FCF7C75D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE8EED307FAA6D475198164B /* GuestViewController.swift */,
+				706D4B0E22F1B7D400386534 /* GuestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0276F4DA30EB7E5241AF639 /* Guest */ = {
+			isa = PBXGroup;
+			children = (
+				55C089BB788700371CAC12B6 /* Protocols */,
+				B9591D7BA5D35FD0FCF7C75D /* View */,
+				A1AD97D9D050F263A8782D2E /* GuestPresenter.swift */,
+				7AB6B06CFDB05E7CF9D848FA /* GuestNavigator.swift */,
+				E5A28E752CFEF4833F552500 /* GuestAssembly.swift */,
+			);
+			path = Guest;
+			sourceTree = "<group>";
+		};
+		F7487B88A7A5F03807B85307 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42D8D13766C19A866BA180B6 /* Pods_Avitogram.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709307E822F02D8F007CB902 /* Build configuration list for PBXNativeTarget "Avitogram" */;
 			buildPhases = (
+				F69451CAE483C0D0C79E87CE /* [CP] Check Pods Manifest.lock */,
 				709307D222F02D8D007CB902 /* Sources */,
 				709307D322F02D8D007CB902 /* Frameworks */,
 				709307D422F02D8D007CB902 /* Resources */,
+				F945AFCACBBB0B6CAD61C42D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,6 +261,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 709307CD22F02D8D007CB902;
 			productRefGroup = 709307D722F02D8D007CB902 /* Products */;
@@ -123,40 +279,98 @@
 			buildActionMask = 2147483647;
 			files = (
 				709307E422F02D8F007CB902 /* LaunchScreen.storyboard in Resources */,
+				70F37CCC22F1D33900C5D482 /* Localizable.strings in Resources */,
+				709307ED22F02DBA007CB902 /* GoogleService-Info.plist in Resources */,
 				709307E122F02D8F007CB902 /* Assets.xcassets in Resources */,
-				709307DF22F02D8D007CB902 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F69451CAE483C0D0C79E87CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Avitogram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F945AFCACBBB0B6CAD61C42D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Avitogram/Pods-Avitogram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Avitogram/Pods-Avitogram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Avitogram/Pods-Avitogram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		709307D222F02D8D007CB902 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709307DC22F02D8D007CB902 /* ViewController.swift in Sources */,
 				709307DA22F02D8D007CB902 /* AppDelegate.swift in Sources */,
+				706D4B0D22F1B70E00386534 /* Navigator.swift in Sources */,
+				706D4B1322F1B93500386534 /* MPRoundedButton.swift in Sources */,
+				706D4B0A22F1990500386534 /* RootApplicationService.swift in Sources */,
+				706D4B0822F198D500386534 /* GoogleApplicationService.swift in Sources */,
+				706D4B0F22F1B7D400386534 /* GuestView.swift in Sources */,
+				148D4A5B57DC5D24A0844C10 /* GuestViewType.swift in Sources */,
+				029906064202AD5352F3B3DE /* GuestPresenterType.swift in Sources */,
+				70F37CD222F1D38900C5D482 /* StringExtension.swift in Sources */,
+				93D0F95A9B41A860C501BE42 /* GuestViewController.swift in Sources */,
+				60CD004877BE1C4B3871EABF /* GuestPresenter.swift in Sources */,
+				706D4B1622F1C38200386534 /* UIColor+Additions.swift in Sources */,
+				0AF88A060B445D135E40F906 /* GuestNavigator.swift in Sources */,
+				4216B7514A47D49ED09391F4 /* GuestAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		709307DD22F02D8D007CB902 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				709307DE22F02D8D007CB902 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		709307E222F02D8F007CB902 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				709307E322F02D8F007CB902 /* Base */,
+				70F37CCF22F1D35300C5D482 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		70F37CCE22F1D33900C5D482 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70F37CCD22F1D33900C5D482 /* en */,
+				70F37CD022F1D35300C5D482 /* ru */,
+			);
+			name = Localizable.strings;
+			path = ../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Application;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -166,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -227,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -280,37 +496,41 @@
 		};
 		709307E922F02D8F007CB902 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97151C0118D66931227CFDF /* Pods-Avitogram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWHVU66XP2;
-				INFOPLIST_FILE = Avitogram/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Avitogram/Source/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mpetrenko.com.Avitogram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mpetrenko.avitogram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		709307EA22F02D8F007CB902 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32721E6679C119FE86C7A20C /* Pods-Avitogram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWHVU66XP2;
-				INFOPLIST_FILE = Avitogram/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Avitogram/Source/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mpetrenko.com.Avitogram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mpetrenko.avitogram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>353083871430-rt7aejkim87i4mlstvm76a53f0o5f8k9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.353083871430-rt7aejkim87i4mlstvm76a53f0o5f8k9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDi3sZPj2lmbK_7ddkTah18CY8WhIF1pio</string>
+	<key>GCM_SENDER_ID</key>
+	<string>353083871430</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mpetrenko.avitogram</string>
+	<key>PROJECT_ID</key>
+	<string>avitogram</string>
+	<key>STORAGE_BUCKET</key>
+	<string>avitogram.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:353083871430:ios:abcd6e307ed8e508</string>
+	<key>DATABASE_URL</key>
+	<string>https://avitogram.firebaseio.com</string>
+</dict>
+</plist>

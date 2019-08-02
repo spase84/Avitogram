@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Avitogram
+
+  Created by Maxim Petrenko on 31.07.2019.
+  Copyright © 2019 MadTeam IT Lab. All rights reserved.
+*/
+
+"sign in" = "Войти";
+"sign up" = "Зарегистрироваться";
+"or" = "или";

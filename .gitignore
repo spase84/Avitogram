@@ -1,0 +1,7 @@
+Pods/*
+Podfile.lock
+Avitogram.xcworkspace/*
+.idea/*
+Templates/*
+build/*
+
