@@ -15,4 +15,6 @@ public class Settings {
 	private init() {}
 	
 	public let placeholderAttrs: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.SLWarmGrey, .font: UIFont.systemFont(ofSize: 17)]
+	
+	public let passwordMinLength: Int = 4
 }

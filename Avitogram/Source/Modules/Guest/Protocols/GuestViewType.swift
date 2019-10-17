@@ -8,4 +8,5 @@
 
 protocol GuestViewType: class {
 	func set(presenter: GuestPresenterType)
+	func show(message: String)
 }

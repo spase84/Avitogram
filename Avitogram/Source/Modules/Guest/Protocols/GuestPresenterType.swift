@@ -9,4 +9,6 @@
 protocol GuestPresenterType {
 	func attach(view: GuestViewType)
 	func viewIsReady()
+	func signUp(email: String, password: String)
+	func signIn(email: String, password: String)
 }

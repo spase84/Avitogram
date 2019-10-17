@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class GuestViewController: UIViewController {
 	private var presenter: GuestPresenterType?
@@ -29,5 +30,15 @@ extension GuestViewController: GuestViewType {
 }
 
 extension GuestViewController: GuestViewDelegate {
+	func signUpEvent(email: String, password: String) {
+		presenter?.signUp(email: email, password: password)
+	}
 	
+	func signInEvent(email: String, password: String) {
+		presenter?.signIn(email: email, password: password)
+	}
+	
+	func show(message: String) {
+		view.makeToast(message, duration: 3.0, position: .top)
+	}
 }

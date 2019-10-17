@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 
 target 'Avitogram' do
@@ -5,10 +6,17 @@ target 'Avitogram' do
 
 	#core
 	pod 'Swinject', :git => 'https://github.com/Swinject/Swinject.git'
-  pod 'Firebase/Analytics'
 	pod 'PluggableAppDelegate'
+	pod 'RxSwift'
+	pod 'RxCocoa'
+	
+	#firebase services
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
 	
 	#ui
 	pod 'EasyPeasy'
+	pod 'Toast-Swift', '~> 5.0.0'
 
 end

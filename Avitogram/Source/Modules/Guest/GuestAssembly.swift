@@ -27,8 +27,8 @@ class GuestAssembly: Assembly {
 			GuestNavigator(sourceViewController: view as? GuestViewController)
 		}
 		
-		container.register(GuestPresenterType.self) { _ in
-			GuestPresenter()
+		container.register(GuestPresenterType.self) { resolver in
+			GuestPresenter(userService: resolver.resolve(UserService.self)!)
 		}
 	}
 }

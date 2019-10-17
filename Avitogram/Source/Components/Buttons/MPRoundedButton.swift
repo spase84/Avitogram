@@ -14,7 +14,8 @@ final class MPRoundedButton: UIButton {
 		self.init()
 		layer.cornerRadius = radius
 		clipsToBounds = true
-		self.backgroundColor = backgroundColor
+		self.setBackgroundImage(UIImage(color: backgroundColor), for: .normal)
+		self.setBackgroundImage(UIImage(color: .gray), for: .disabled)
 		setTitleColor(textColor, for: .normal)
 	}
 }

@@ -16,10 +16,8 @@ class AppDelegate: PluggableApplicationDelegate {
 	
 	override var services: [ApplicationService] {
 		return [
-//			LoggerApplicationService(),
 			rootApplicationService,
 			GoogleApplicationService()
-//			ApnsApplicationService()
 		]
 	}
 	

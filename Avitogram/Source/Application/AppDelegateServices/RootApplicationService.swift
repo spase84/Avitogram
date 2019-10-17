@@ -15,12 +15,12 @@ final class RootApplicationService: NSObject, ApplicationService {
 	private var application: UIApplication!
 	private let assembler = Assembler([])
 	private let assemblies: [Assembly] = [
-		GuestAssembly()
-//		SignUpAssembly(),
-//		SignInAssembly(),
-//		HomeAssembly(),
+		ServicesAssembly(),
+		ProvidersAssembly(),
+		GuestAssembly(),
+		HomeAssembly()
 	]
-	
+
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		self.application = application
 		assembler.apply(assemblies: assemblies)
@@ -28,32 +28,32 @@ final class RootApplicationService: NSObject, ApplicationService {
 		self.reloadStartScreen()
 		return true
 	}
-	
-	public enum LoadingModuleType {
-		case home, signin
-	}
-	
+
 	public func reloadStartScreen() {
 		DispatchQueue.main.async {
-//			if nil == DefaultsService.accessToken {
-				self.load(moduleType: .signin, for: self.application)
-//			} else {
-//				self.load(moduleType: .home, for: self.application)
-//			}
+			if UserServiceImpl.currentUser.isGuest {
+				self.load(moduleType: .guest, for: self.application)
+			} else {
+				self.load(moduleType: .home, for: self.application)
+			}
 		}
 	}
 	
 	// MARK: - private
+
+	private enum LoadingModuleType {
+		case guest, home
+	}
+
 	private func load(moduleType: LoadingModuleType, for application: UIApplication) {
 		var rootVC = UIViewController()
-		rootVC.view.backgroundColor = UIColor.white
+		rootVC.view.backgroundColor = .SLBlack
 		switch moduleType {
 		case .home:
-//			if let vc = assembler.resolver.resolve(HomeViewType.self) as? HomeViewController {
-//				rootVC = vc
-//			}
-			debugPrint("TEST )))))")
-		case .signin:
+			if let vc = assembler.resolver.resolve(HomeViewType.self) as? HomeViewController {
+				rootVC = vc
+			}
+		case .guest:
 			if let vc = assembler.resolver.resolve(GuestViewType.self) as? GuestViewController {
 				rootVC = vc
 			}
