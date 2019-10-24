@@ -31,7 +31,8 @@ final class RootApplicationService: NSObject, ApplicationService {
 
 	public func reloadStartScreen() {
 		DispatchQueue.main.async {
-			if UserServiceImpl.currentUser.isGuest {
+			if UserServiceImpl.currentUser.isGuest ||
+				UserServiceImpl.isFirstLaunch {
 				self.load(moduleType: .guest, for: self.application)
 			} else {
 				self.load(moduleType: .home, for: self.application)
@@ -51,14 +52,16 @@ final class RootApplicationService: NSObject, ApplicationService {
 		switch moduleType {
 		case .home:
 			if let vc = assembler.resolver.resolve(HomeViewType.self) as? HomeViewController {
-				rootVC = vc
+				rootVC = UINavigationController(rootViewController: vc)
 			}
 		case .guest:
 			if let vc = assembler.resolver.resolve(GuestViewType.self) as? GuestViewController {
 				rootVC = vc
 			}
 		}
-		
+
+		UserServiceImpl.isFirstLaunch = false
+
 		if let delegate = application.delegate as? AppDelegate {
 			if nil == delegate.window { delegate.window = UIWindow() }
 			delegate.window?.rootViewController = rootVC

@@ -19,3 +19,11 @@ struct Post {
 		case userId = "user_id"
 	}
 }
+
+extension Post: Codable {
+	private enum CodingKeys: String, CodingKey {
+		case title
+		case createdAt = "created_at"
+		case userId = "user_id"
+	}
+}

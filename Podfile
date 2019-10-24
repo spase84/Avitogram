@@ -14,6 +14,7 @@ target 'Avitogram' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
+	pod 'FirebaseFirestoreSwift'
 	
 	#ui
 	pod 'EasyPeasy'

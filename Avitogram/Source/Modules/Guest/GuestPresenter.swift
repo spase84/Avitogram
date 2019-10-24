@@ -24,8 +24,7 @@ class GuestPresenter {
 			guard nil == error else { self.handle(error: error!); return }
 			switch status {
 			case .authorized:
-				// TODO: reload start screen
-				debugPrint("AUTHORIZED")
+				(AppService.getAppDelegate() as? AppDelegate)?.reloadRootScreen()
 			default:
 				break
 			}

@@ -15,6 +15,12 @@ class HomePresenter {
 		self.navigator = navigator
 		self.postService = postService
 	}
+
+	// MARK: - private
+
+	private func handle(error: Error) {
+		debugPrint(error.localizedDescription)
+	}
 }
 
 extension HomePresenter: HomePresenterType {
@@ -23,8 +29,9 @@ extension HomePresenter: HomePresenterType {
 	}
 
 	func viewIsReady() {
-		let collection = postService.getPosts { posts, error in
-			debugPrint(posts, error)
+		postService.getPosts { [weak self] posts, error in
+			guard nil == error else { self?.handle(error: error!); return }
+			self?.view?.update(collection: posts)
 		}
 	}
 }

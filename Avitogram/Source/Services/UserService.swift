@@ -17,6 +17,7 @@ enum AuthStatus {
 protocol UserService {
 	var trigger: PublishSubject<(AuthStatus, Error?)> { get }
 	static var currentUser: User { get }
+	static var isFirstLaunch: Bool { get set }
 	func signIn(email: String, password: String)
 	func sugnUp(email: String, password: String)
 	func signOut()
@@ -32,6 +33,15 @@ final class UserServiceImpl: UserService {
 			user.name = firUser.displayName
 		}
 		return user
+	}
+	static var isFirstLaunch: Bool {
+		get {
+			return !UserDefaults.standard.bool(forKey: "isNotFirstLaunch")
+		}
+		set {
+			UserDefaults.standard.set(!newValue, forKey: "isNotFirstLaunch")
+			UserDefaults.standard.synchronize()
+		}
 	}
 
 	func signIn(email: String, password: String) {
