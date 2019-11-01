@@ -14,6 +14,16 @@
 		19BF729C3114790C5F9BBE1A /* HomePresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3C924CCC60D010EAFDB8C5 /* HomePresenterType.swift */; };
 		4216B7514A47D49ED09391F4 /* GuestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A28E752CFEF4833F552500 /* GuestAssembly.swift */; };
 		60CD004877BE1C4B3871EABF /* GuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AD97D9D050F263A8782D2E /* GuestPresenter.swift */; };
+		704B22F7236036560024C592 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B22F6236036560024C592 /* BaseViewController.swift */; };
+		704B22F9236047BB0024C592 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B22F8236047BB0024C592 /* AppService.swift */; };
+		704B22FB23604CE10024C592 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B22FA23604CE10024C592 /* HomeView.swift */; };
+		704B22FD23604E3B0024C592 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B22FC23604E3B0024C592 /* BaseView.swift */; };
+		704B230023604EAE0024C592 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B22FF23604EAE0024C592 /* PostCell.swift */; };
+		704B230323604EFE0024C592 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B230223604EFE0024C592 /* Configurable.swift */; };
+		704B230523604F1F0024C592 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B230423604F1F0024C592 /* BaseTableViewCell.swift */; };
+		704B23072361C9590024C592 /* FormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B23062361C9590024C592 /* FormatterExtension.swift */; };
+		704B23092361C9B10024C592 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B23082361C9B10024C592 /* DateExtension.swift */; };
+		705069C7236C15B000EEB09A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705069C6236C15B000EEB09A /* StorageService.swift */; };
 		7054C7F4234B734300C36BD3 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054C7F3234B734300C36BD3 /* UITextFieldExtension.swift */; };
 		7054C7F7234B77CF00C36BD3 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054C7F6234B77CF00C36BD3 /* UserService.swift */; };
 		7054C7F9234B7BD900C36BD3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054C7F8234B7BD900C36BD3 /* Settings.swift */; };
@@ -51,7 +61,17 @@
 		32721E6679C119FE86C7A20C /* Pods-Avitogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avitogram.release.xcconfig"; path = "Target Support Files/Pods-Avitogram/Pods-Avitogram.release.xcconfig"; sourceTree = "<group>"; };
 		3922E0796F18451E22994D2A /* GuestPresenterType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestPresenterType.swift; sourceTree = "<group>"; };
 		42D8D13766C19A866BA180B6 /* Pods_Avitogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Avitogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		704B22F6236036560024C592 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		704B22F8236047BB0024C592 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		704B22FA23604CE10024C592 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		704B22FC23604E3B0024C592 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		704B22FF23604EAE0024C592 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		704B230223604EFE0024C592 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		704B230423604F1F0024C592 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		704B23062361C9590024C592 /* FormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExtension.swift; sourceTree = "<group>"; };
+		704B23082361C9B10024C592 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		704F2F4C5C28BF575E05E4E7 /* GuestViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestViewType.swift; sourceTree = "<group>"; };
+		705069C6236C15B000EEB09A /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		7054C7F3234B734300C36BD3 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		7054C7F6234B77CF00C36BD3 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7054C7F8234B7BD900C36BD3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -63,10 +83,10 @@
 		7056A25D2358A46C000CEAD7 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		706D4B0722F198D500386534 /* GoogleApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApplicationService.swift; sourceTree = "<group>"; };
 		706D4B0922F1990500386534 /* RootApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApplicationService.swift; sourceTree = "<group>"; };
-		706D4B0C22F1B70E00386534 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Navigator.swift; path = ../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Core/Navigator.swift; sourceTree = "<group>"; };
-		706D4B0E22F1B7D400386534 /* GuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuestView.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Modules/Guest/View/GuestView.swift; sourceTree = "<group>"; };
-		706D4B1222F1B93500386534 /* MPRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MPRoundedButton.swift; path = ../../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Components/Buttons/MPRoundedButton.swift; sourceTree = "<group>"; };
-		706D4B1522F1C38200386534 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Additions.swift"; path = "../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Extensions/UIColor+Additions.swift"; sourceTree = "<group>"; };
+		706D4B0C22F1B70E00386534 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		706D4B0E22F1B7D400386534 /* GuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestView.swift; sourceTree = "<group>"; };
+		706D4B1222F1B93500386534 /* MPRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPRoundedButton.swift; sourceTree = "<group>"; };
+		706D4B1522F1C38200386534 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		707121192354B0C60014AFC3 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		709307D622F02D8D007CB902 /* Avitogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avitogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709307D922F02D8D007CB902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +98,7 @@
 		70F37CCD22F1D33900C5D482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		70F37CCF22F1D35300C5D482 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		70F37CD022F1D35300C5D482 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		70F37CD122F1D38900C5D482 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = ../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		70F37CD122F1D38900C5D482 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7AB6B06CFDB05E7CF9D848FA /* GuestNavigator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestNavigator.swift; sourceTree = "<group>"; };
 		91DBA0C807689EA6DC2A178B /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1AD97D9D050F263A8782D2E /* GuestPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestPresenter.swift; sourceTree = "<group>"; };
@@ -115,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				91DBA0C807689EA6DC2A178B /* HomeViewController.swift */,
+				704B22FA23604CE10024C592 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,12 +158,30 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		704B22FE23604E9D0024C592 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				704B22FF23604EAE0024C592 /* PostCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		704B230123604EF00024C592 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				704B230223604EFE0024C592 /* Configurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7054C7F5234B77A800C36BD3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				7054C7F6234B77CF00C36BD3 /* UserService.swift */,
 				707121192354B0C60014AFC3 /* ServicesAssembly.swift */,
 				7056A25D2358A46C000CEAD7 /* PostService.swift */,
+				704B22F8236047BB0024C592 /* AppService.swift */,
+				705069C6236C15B000EEB09A /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,6 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				7056A25923588E64000CEAD7 /* BaseProvider.swift */,
+				704B22F6236036560024C592 /* BaseViewController.swift */,
+				704B22FC23604E3B0024C592 /* BaseView.swift */,
+				704B230423604F1F0024C592 /* BaseTableViewCell.swift */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -200,6 +242,8 @@
 		706D4B1022F1B90F00386534 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				704B230123604EF00024C592 /* Protocols */,
+				704B22FE23604E9D0024C592 /* Cells */,
 				7056A25823588E4D000CEAD7 /* BaseComponents */,
 				706D4B1122F1B91700386534 /* Buttons */,
 			);
@@ -221,6 +265,8 @@
 				70F37CD122F1D38900C5D482 /* StringExtension.swift */,
 				7054C7F3234B734300C36BD3 /* UITextFieldExtension.swift */,
 				70EFDB6023546C35007C4AED /* UIImageExtension.swift */,
+				704B23062361C9590024C592 /* FormatterExtension.swift */,
+				704B23082361C9B10024C592 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,25 +488,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				7056A25E2358A46C000CEAD7 /* PostService.swift in Sources */,
+				704B23092361C9B10024C592 /* DateExtension.swift in Sources */,
 				709307DA22F02D8D007CB902 /* AppDelegate.swift in Sources */,
 				7056A25723588C01000CEAD7 /* Post.swift in Sources */,
 				706D4B0D22F1B70E00386534 /* Navigator.swift in Sources */,
 				706D4B1322F1B93500386534 /* MPRoundedButton.swift in Sources */,
+				704B22FB23604CE10024C592 /* HomeView.swift in Sources */,
 				7054C7F9234B7BD900C36BD3 /* Settings.swift in Sources */,
 				706D4B0A22F1990500386534 /* RootApplicationService.swift in Sources */,
+				704B22F9236047BB0024C592 /* AppService.swift in Sources */,
 				70EFDB6123546C35007C4AED /* UIImageExtension.swift in Sources */,
 				706D4B0822F198D500386534 /* GoogleApplicationService.swift in Sources */,
+				704B23072361C9590024C592 /* FormatterExtension.swift in Sources */,
 				706D4B0F22F1B7D400386534 /* GuestView.swift in Sources */,
 				7056A2522358641A000CEAD7 /* User.swift in Sources */,
 				148D4A5B57DC5D24A0844C10 /* GuestViewType.swift in Sources */,
 				029906064202AD5352F3B3DE /* GuestPresenterType.swift in Sources */,
+				704B22F7236036560024C592 /* BaseViewController.swift in Sources */,
 				70F37CD222F1D38900C5D482 /* StringExtension.swift in Sources */,
+				704B230323604EFE0024C592 /* Configurable.swift in Sources */,
 				93D0F95A9B41A860C501BE42 /* GuestViewController.swift in Sources */,
 				7054C7F4234B734300C36BD3 /* UITextFieldExtension.swift in Sources */,
 				7056A25A23588E64000CEAD7 /* BaseProvider.swift in Sources */,
 				7056A25C2358A1A5000CEAD7 /* ProvidersAssembly.swift in Sources */,
+				704B230523604F1F0024C592 /* BaseTableViewCell.swift in Sources */,
 				60CD004877BE1C4B3871EABF /* GuestPresenter.swift in Sources */,
 				7054C7F7234B77CF00C36BD3 /* UserService.swift in Sources */,
+				704B230023604EAE0024C592 /* PostCell.swift in Sources */,
+				705069C7236C15B000EEB09A /* StorageService.swift in Sources */,
 				7056A25523588BA1000CEAD7 /* PostProvider.swift in Sources */,
 				7071211A2354B0C60014AFC3 /* ServicesAssembly.swift in Sources */,
 				706D4B1622F1C38200386534 /* UIColor+Additions.swift in Sources */,
@@ -470,6 +525,7 @@
 				19BF729C3114790C5F9BBE1A /* HomePresenterType.swift in Sources */,
 				C361F6E6996E61797E466C10 /* HomeViewController.swift in Sources */,
 				03502D002BEC3D9C088BA9CF /* HomePresenter.swift in Sources */,
+				704B22FD23604E3B0024C592 /* BaseView.swift in Sources */,
 				BF252A0C73BDED53FA6E12E1 /* HomeNavigator.swift in Sources */,
 				8EE20FEF79C9E7E9D3C72AE2 /* HomeAssembly.swift in Sources */,
 			);
@@ -494,7 +550,6 @@
 				70F37CD022F1D35300C5D482 /* ru */,
 			);
 			name = Localizable.strings;
-			path = ../../../../../../../System/Volumes/Data/Users/mpetrenko/WORK/Avitogram/Avitogram/Source/Application;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

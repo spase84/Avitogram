@@ -9,17 +9,19 @@
 import Foundation
 
 protocol PostService {
-	func getPosts(completion: (_ posts: [Post], _ error: Error?) -> Void)
+	func getPosts(completion: @escaping (_ posts: [Post], _ error: Error?) -> Void)
 }
 
 final class PostServiceImpl: PostService {
 	private var provider: PostProvider!
 
-	init(provider: PostProvider) {
+	init(provider: PostProvider, storageService: StorageService) {
 		self.provider = provider
 	}
 
-	func getPosts(completion: ([Post], Error?) -> Void) {
-		_ = provider.getCollection()
+	func getPosts(completion: @escaping ([Post], Error?) -> Void) {
+		provider.getCollection(completion: { (collection, error) in
+			completion(collection, error)
+		})
 	}
 }

@@ -13,8 +13,12 @@ class ServicesAssembly: Assembly {
 		container.register(UserService.self) { _ in
 			UserServiceImpl()
 		}
+		container.register(StorageService.self) { _ in
+			StorageServiceImpl()
+		}
 		container.register(PostService.self) { resolver in
-			PostServiceImpl(provider: resolver.resolve(PostProvider.self)!)
+			PostServiceImpl(provider: resolver.resolve(PostProvider.self)!,
+											storageService: resolver.resolve(StorageService.self)!)
 		}
 	}
 }

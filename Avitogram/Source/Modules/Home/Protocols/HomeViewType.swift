@@ -8,4 +8,5 @@
 
 protocol HomeViewType: class {
 	func set(presenter: HomePresenterType)
+	func update(collection: [Post])
 }

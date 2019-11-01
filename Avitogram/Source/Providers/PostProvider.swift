@@ -8,20 +8,28 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 protocol PostProvider: BaseProvider {
-	func getCollection()
+	func getCollection(completion: @escaping (_ collection: [Post], _ error: Error?) -> Void)
 }
 
 final class PostProviderImpl: PostProvider {
 	internal var collectionName = "posts"
 	private let db = Firestore.firestore()
 
-	func getCollection() {
+	func getCollection(completion: @escaping (_ collection: [Post], _ error: Error?) -> Void) {
 		db.collection(collectionName)
-			.whereField(Post.Fields.userId.rawValue, isEqualTo: UserServiceImpl.currentUser.id ?? "")
+//			.whereField(Post.Fields.userId.rawValue, isEqualTo: UserServiceImpl.currentUser.id ?? "")
 			.getDocuments { snapshot, error in
-				debugPrint(snapshot?.documents, error)
+				guard nil == error else { completion([], error!); return }
+				guard let snapshot = snapshot else { completion([], nil); return }
+				let collection = snapshot.documents.compactMap { document -> Post? in
+					return try? document.data(as: Post.self)
+				}
+				completion(collection, nil)
 		}
 	}
+
+	// MARK: - private
 }

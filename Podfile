@@ -14,9 +14,12 @@ target 'Avitogram' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
+	pod 'Firebase/Storage'
+	pod 'FirebaseFirestoreSwift'
 	
 	#ui
 	pod 'EasyPeasy'
 	pod 'Toast-Swift', '~> 5.0.0'
+	pod 'Paparazzo/Core', :git => 'https://github.com/avito-tech/Paparazzo.git', :branch => 'develop'
 
 end
