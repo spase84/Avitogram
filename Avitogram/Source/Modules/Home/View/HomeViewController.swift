@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Paparazzo
+import ImageSource
 
 class HomeViewController: BaseViewController {
 	private var presenter: HomePresenterType?
@@ -32,15 +34,40 @@ class HomeViewController: BaseViewController {
 																											 action: #selector(signoutAction))
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
 	}
+	
+	private func showPicker() {
+		let viewController = PaparazzoFacade.paparazzoViewController(
+			theme: PaparazzoUITheme(),
+			parameters: MediaPickerData(
+				items: [],
+				maxItemsCount: 1
+			),
+			onFinish: { images in
+				guard let image = images.first?.image else { return }
+				image.fullResolutionImageData { data in
+					guard let imgData = data else { return }
+					self.presenter?.imagePicked(data: imgData)
+				}
+			}
+		)
+
+		self.present(viewController, animated: true, completion: nil)
+	}
 
 	// MARK: - actions
 
 	@objc private func signoutAction() {
-		
+		let alert = UIAlertController(title: "sign_out".localized.firstUppercased, message: "sign_out_confirmation".localized.firstUppercased,
+																	preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "sign_out".localized.firstUppercased, style: .destructive, handler: { _ in
+			self.presenter?.signOut()
+		}))
+		alert.addAction(UIAlertAction(title: "cancel".localized.firstUppercased, style: .cancel, handler: nil))
+		present(alert, animated: true, completion: nil)
 	}
 
 	@objc private func addAction() {
-		
+		showPicker()
 	}
 }
 

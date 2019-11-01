@@ -24,7 +24,8 @@ class HomeAssembly: Assembly {
 		
 		container.register(HomePresenterType.self) { (resolver, view: HomeViewType) in
 			HomePresenter(navigator: resolver.resolve(HomeNavigator.self, argument: view)!,
-										postService: resolver.resolve(PostService.self)!)
+										postService: resolver.resolve(PostService.self)!,
+										userService: resolver.resolve(UserService.self)!)
 		}
 	}
 }

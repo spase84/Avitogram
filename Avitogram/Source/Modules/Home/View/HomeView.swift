@@ -25,6 +25,8 @@ final class HomeView: BaseView {
 		table.separatorStyle = .none
 		table.backgroundColor = .white
 		table.tableFooterView = UIView()
+		table.showsVerticalScrollIndicator = false
+		table.showsHorizontalScrollIndicator = false
 		return table
 	}()
 

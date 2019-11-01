@@ -19,6 +19,13 @@ final class PostCell: BaseTableViewCell {
 
 	// MARK: - subviews
 
+	private var indicator: UIActivityIndicatorView = {
+		let view = UIActivityIndicatorView(style: .whiteLarge)
+		view.color = .SLBlackTwo
+		view.startAnimating()
+		return view
+	}()
+
 	private var imgView: UIImageView = {
 		let view = UIImageView()
 		view.contentMode = .scaleAspectFill
@@ -57,6 +64,8 @@ final class PostCell: BaseTableViewCell {
 													Top(20).to(imgView, .bottom),
 													Height(20),
 													Right(16))
+		imgView.addSubview(indicator)
+		indicator.easy.layout(Center())
 	}
 
 	// MARK: - private
@@ -64,5 +73,10 @@ final class PostCell: BaseTableViewCell {
 	private func fillUI(post: Post) {
 		titleLabel.text = post.title
 		dateLabel.text = post.createdAt.dd．MM．yy
+		StorageServiceImpl.getImageData(name: post.imageName) { [weak self] data, error in
+			guard let imgData = data else { return }
+			self?.imgView.image = UIImage(data: imgData)
+			self?.indicator.stopAnimating()
+		}
 	}
 }

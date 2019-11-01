@@ -15,7 +15,7 @@ protocol PostService {
 final class PostServiceImpl: PostService {
 	private var provider: PostProvider!
 
-	init(provider: PostProvider) {
+	init(provider: PostProvider, storageService: StorageService) {
 		self.provider = provider
 	}
 

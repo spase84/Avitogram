@@ -23,6 +23,7 @@
 		704B230523604F1F0024C592 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B230423604F1F0024C592 /* BaseTableViewCell.swift */; };
 		704B23072361C9590024C592 /* FormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B23062361C9590024C592 /* FormatterExtension.swift */; };
 		704B23092361C9B10024C592 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B23082361C9B10024C592 /* DateExtension.swift */; };
+		705069C7236C15B000EEB09A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705069C6236C15B000EEB09A /* StorageService.swift */; };
 		7054C7F4234B734300C36BD3 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054C7F3234B734300C36BD3 /* UITextFieldExtension.swift */; };
 		7054C7F7234B77CF00C36BD3 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054C7F6234B77CF00C36BD3 /* UserService.swift */; };
 		7054C7F9234B7BD900C36BD3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054C7F8234B7BD900C36BD3 /* Settings.swift */; };
@@ -70,6 +71,7 @@
 		704B23062361C9590024C592 /* FormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExtension.swift; sourceTree = "<group>"; };
 		704B23082361C9B10024C592 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		704F2F4C5C28BF575E05E4E7 /* GuestViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuestViewType.swift; sourceTree = "<group>"; };
+		705069C6236C15B000EEB09A /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		7054C7F3234B734300C36BD3 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		7054C7F6234B77CF00C36BD3 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7054C7F8234B7BD900C36BD3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				707121192354B0C60014AFC3 /* ServicesAssembly.swift */,
 				7056A25D2358A46C000CEAD7 /* PostService.swift */,
 				704B22F8236047BB0024C592 /* AppService.swift */,
+				705069C6236C15B000EEB09A /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				60CD004877BE1C4B3871EABF /* GuestPresenter.swift in Sources */,
 				7054C7F7234B77CF00C36BD3 /* UserService.swift in Sources */,
 				704B230023604EAE0024C592 /* PostCell.swift in Sources */,
+				705069C7236C15B000EEB09A /* StorageService.swift in Sources */,
 				7056A25523588BA1000CEAD7 /* PostProvider.swift in Sources */,
 				7071211A2354B0C60014AFC3 /* ServicesAssembly.swift in Sources */,
 				706D4B1622F1C38200386534 /* UIColor+Additions.swift in Sources */,

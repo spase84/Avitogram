@@ -12,11 +12,15 @@ struct Post {
 	var title: String
 	var createdAt: Date
 	var userId: String
+	var imageName: String
+
+	var image: Data?
 
 	enum Fields: String {
 		case id = "id"
 		case createdAt = "created_at"
 		case userId = "user_id"
+		case imageName = "image_name"
 	}
 }
 
@@ -25,5 +29,6 @@ extension Post: Codable {
 		case title
 		case createdAt = "created_at"
 		case userId = "user_id"
+		case imageName = "image_name"
 	}
 }

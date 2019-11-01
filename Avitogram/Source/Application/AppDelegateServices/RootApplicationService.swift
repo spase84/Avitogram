@@ -52,7 +52,10 @@ final class RootApplicationService: NSObject, ApplicationService {
 		switch moduleType {
 		case .home:
 			if let vc = assembler.resolver.resolve(HomeViewType.self) as? HomeViewController {
-				rootVC = UINavigationController(rootViewController: vc)
+				let navigation = UINavigationController(rootViewController: vc)
+				navigation.navigationBar.tintColor = .white
+				navigation.navigationBar.barTintColor = .SLBlackTwo
+				rootVC = navigation
 			}
 		case .guest:
 			if let vc = assembler.resolver.resolve(GuestViewType.self) as? GuestViewController {
