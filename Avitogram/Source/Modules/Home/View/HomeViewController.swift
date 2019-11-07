@@ -9,6 +9,7 @@
 import UIKit
 import Paparazzo
 import ImageSource
+import Toast_Swift
 
 class HomeViewController: BaseViewController {
 	private var presenter: HomePresenterType?
@@ -79,6 +80,14 @@ extension HomeViewController: HomeViewType {
 	func update(collection: [Post]) {
 		(view as? HomeView)?.update(collection: collection)
 	}
+
+	func show(message: String) {
+		view.makeToast(message, duration: 3.0, position: .top)
+	}
 }
 
-extension HomeViewController: HomeViewDelegate {}
+extension HomeViewController: HomeViewDelegate {
+	func refresh() {
+		presenter?.refresh()
+	}
+}

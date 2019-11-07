@@ -12,4 +12,5 @@ protocol HomePresenterType {
 	func viewIsReady()
 	func signOut()
 	func imagePicked(data: Data)
+	func refresh()
 }

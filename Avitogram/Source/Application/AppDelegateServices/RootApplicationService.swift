@@ -18,13 +18,13 @@ final class RootApplicationService: NSObject, ApplicationService {
 		ServicesAssembly(),
 		ProvidersAssembly(),
 		GuestAssembly(),
-		HomeAssembly()
+		HomeAssembly(),
+		CreatePostAssembly()
 	]
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		self.application = application
 		assembler.apply(assemblies: assemblies)
-//		_ = Settings.shared // make initial customization for UI components described in Settings.init()
 		self.reloadStartScreen()
 		return true
 	}
@@ -39,7 +39,7 @@ final class RootApplicationService: NSObject, ApplicationService {
 			}
 		}
 	}
-	
+
 	// MARK: - private
 
 	private enum LoadingModuleType {
@@ -55,6 +55,7 @@ final class RootApplicationService: NSObject, ApplicationService {
 				let navigation = UINavigationController(rootViewController: vc)
 				navigation.navigationBar.tintColor = .white
 				navigation.navigationBar.barTintColor = .SLBlackTwo
+				navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 				rootVC = navigation
 			}
 		case .guest:

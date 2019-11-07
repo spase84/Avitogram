@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+import FirebaseUI
 
 final class PostCell: BaseTableViewCell {
 	override var value: Any? {
@@ -18,6 +19,7 @@ final class PostCell: BaseTableViewCell {
 	}
 
 	// MARK: - subviews
+	private let gradient = CAGradientLayer()
 
 	private var indicator: UIActivityIndicatorView = {
 		let view = UIActivityIndicatorView(style: .whiteLarge)
@@ -30,13 +32,15 @@ final class PostCell: BaseTableViewCell {
 		let view = UIImageView()
 		view.contentMode = .scaleAspectFill
 		view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
+		view.clipsToBounds = true
+		view.layer.cornerRadius = 4
 		return view
 	}()
 
 	private let titleLabel: UILabel = {
 		let label = UILabel()
-		label.textColor = .black
-		label.font = UIFont.systemFont(ofSize: 17)
+		label.textColor = .white
+		label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
 		label.numberOfLines = 0
 		label.lineBreakMode = .byWordWrapping
 		return label
@@ -44,7 +48,7 @@ final class PostCell: BaseTableViewCell {
 
 	private let dateLabel: UILabel = {
 		let label = UILabel()
-		label.textColor = .lightGray
+		label.textColor = UIColor.white.withAlphaComponent(0.8)
 		label.font = UIFont.systemFont(ofSize: 13)
 		label.textAlignment = .right
 		return label
@@ -55,15 +59,15 @@ final class PostCell: BaseTableViewCell {
 		addSubview(imgView)
 		addSubview(titleLabel)
 		addSubview(dateLabel)
-		imgView.easy.layout(Left(), Right(), Top(), Height().like(imgView, .width))
+		imgView.easy.layout(Left(8), Right(8), Top(16), Height().like(imgView, .width), Bottom())
 		titleLabel.easy.layout(Left(16),
-													 Top(20).to(imgView, .bottom),
-													 Bottom(16),
+													 Bottom(16).to(imgView, .bottom),
 													 Height(>=20).with(.required))
 		dateLabel.easy.layout(Left(10).to(titleLabel, .right),
-													Top(20).to(imgView, .bottom),
+													Top(10).to(imgView, .bottom),
 													Height(20),
-													Right(16))
+													Right(16),
+													Bottom(16).to(imgView, .bottom))
 		imgView.addSubview(indicator)
 		indicator.easy.layout(Center())
 	}
@@ -72,11 +76,26 @@ final class PostCell: BaseTableViewCell {
 
 	private func fillUI(post: Post) {
 		titleLabel.text = post.title
-		dateLabel.text = post.createdAt.dd．MM．yy
-		StorageServiceImpl.getImageData(name: post.imageName) { [weak self] data, error in
-			guard let imgData = data else { return }
-			self?.imgView.image = UIImage(data: imgData)
+		if Calendar.current.isDateInToday(post.createdAt) {
+			dateLabel.text = post.createdAt.hh．mm
+		} else {
+			dateLabel.text = post.createdAt.dd．MM．yy
+		}
+		guard let reference = post.reference else { return }
+		imgView.sd_setImage(with: reference, placeholderImage: nil) { [weak self] _, _, _, _ in
 			self?.indicator.stopAnimating()
+			
+			guard let gradient = self?.gradient else { return }
+			gradient.removeFromSuperlayer()
+
+			gradient.frame = self?.imgView.frame ?? .zero
+			gradient.position.x -= 8
+			gradient.colors = [
+					UIColor(white: 0, alpha: 0).cgColor,
+					UIColor(white: 0, alpha: 0).cgColor,
+					UIColor(white: 0, alpha: 0.6).cgColor
+			]
+			self?.imgView.layer.insertSublayer(gradient, at: 0)
 		}
 	}
 }

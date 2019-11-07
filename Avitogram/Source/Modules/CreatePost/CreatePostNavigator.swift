@@ -1,30 +1,29 @@
 //
-//  HomeHomeNavigator.swift
+//  CreatePostCreatePostNavigator.swift
 //  Avitogram
 //
-//  Created by Maxim Petrenko on 17/10/2019.
+//  Created by Maxim Petrenko on 01/11/2019.
 //  Copyright © 2019 Max Petrenko. All rights reserved.
 //
 import UIKit
 import Swinject
 
-class HomeNavigator: Navigator {
-	private var resolver: Resolver!
+class CreatePostNavigator: Navigator {
+	var resolver: Resolver!
 
 	enum Destination {
-		case createPost(imgData: Data)
+		case someDestination
 	}
   
 	internal weak var sourceViewController: UIViewController?
 
 	// MARK: - Initializer
-	init(sourceViewController: UIViewController?, resolver: Resolver) {
+	init(sourceViewController: UIViewController?) {
 		self.sourceViewController = sourceViewController
-		self.resolver = resolver
 	}
 
 	// MARK: - Navigator
-	func navigate(to destination: HomeNavigator.Destination) {
+	func navigate(to destination: CreatePostNavigator.Destination) {
 		if let destinationViewController = makeViewController(for: destination) {
 			if let navVC = sourceViewController?.navigationController {
 				navVC.pushViewController(destinationViewController, animated: true)
@@ -35,11 +34,8 @@ class HomeNavigator: Navigator {
 	// MARK: - Private
 	internal func makeViewController(for destination: Destination) -> UIViewController? {
 		switch destination {
-		case .createPost(let imgData):
-			if let vc = resolver.resolve(CreatePostViewType.self) as? CreatePostViewController {
-				vc.presenter?.set(imgData: imgData)
-				return vc
-			}
+		case .someDestination:
+//			return resolver.resolve(SomeViewType.self) as? SomeViewController
 			return nil
 		}
 	}

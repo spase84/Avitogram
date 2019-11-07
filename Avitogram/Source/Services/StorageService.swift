@@ -10,20 +10,19 @@ import Foundation
 import Firebase
 
 protocol StorageService {
-//	static func getImageData(name: String, completion: @escaping ((_ imgData: Data?, _ error: Error?) -> Void))
+	func create(data: Data, completion: @escaping (_ name: String?, _ error: Error?) -> Void)
 }
 
 final class StorageServiceImpl: StorageService {
+	private var provider: StorageProvider!
+	
+	init(storageProvider: StorageProvider) {
+		self.provider = storageProvider
+	}
 
-	static func getImageData(name: String, completion: @escaping ((_ imgData: Data?, _ error: Error?) -> Void)) {
-		let imgRef = Storage.storage().reference().child("images/\(name)")
-		imgRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
-			if let error = error {
-				debugPrint("ERROR getting image from Storage: \(error.localizedDescription)")
-				completion(nil, error)
-			} else {
-				completion(data, nil)
-			}
+	func create(data: Data, completion: @escaping (String?, Error?) -> Void) {
+		provider.create(data: data) { name, error in
+			completion(name, error)
 		}
 	}
 }

@@ -23,6 +23,11 @@ class GuestView: UIView {
 	// subviews
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
+	private let logo: UIImageView = {
+		let view = UIImageView(image: #imageLiteral(resourceName: "Logo"))
+		view.contentMode = .scaleAspectFill
+		return view
+	}()
 	private let signInButton: UIButton = {
 		let btn = MPRoundedButton(radius: 5, backgroundColor: .SLDullYellow, textColor: .black)
 		btn.setTitle("sign in".localized.firstUppercased, for: .normal)
@@ -87,6 +92,7 @@ class GuestView: UIView {
 	private func setupUI() {
 		self.backgroundColor = .SLBlack
 		setupScrollView()
+		setupLogo()
 		setupSignInForm()
 		setupSignInButton()
 		setupOrLabel()
@@ -110,14 +116,14 @@ class GuestView: UIView {
 				self.signUpButton.isEnabled = isValidCredentials
 			}).disposed(by: disposeBag)
 
-		let emailOnNext = emailField.rx.controlEvent([.editingDidEndOnExit])
+		emailField.rx.controlEvent([.editingDidEndOnExit])
 			.subscribe(onNext: { _ in
 				self.passwordField.becomeFirstResponder()
-			})
-		let passwordDone = passwordField.rx.controlEvent([.editingDidEndOnExit])
+			}).disposed(by: disposeBag)
+		passwordField.rx.controlEvent([.editingDidEndOnExit])
 			.subscribe(onNext: { _ in
 				self.signInAction()
-			})
+			}).disposed(by: disposeBag)
 	}
 
 	private func setupTapGesture() {
@@ -130,6 +136,11 @@ class GuestView: UIView {
 		scrollView.easy.layout(Edges())
 		scrollView.addSubview(contentView)
 		contentView.easy.layout(Edges(), Width().like(self), Height().like(self).with(.low))
+	}
+
+	private func setupLogo() {
+		contentView.addSubview(logo)
+		logo.easy.layout(CenterX(), Width(50), Height(50), Top(20).to(self.safeAreaLayoutGuide, .top))
 	}
 
 	private func setupSignInButton() {
@@ -168,7 +179,7 @@ class GuestView: UIView {
 		contentView.addSubview(emailField)
 		emailField.easy.layout(Left(40),
 													 Right(40),
-													 Top(50).to(self.safeAreaLayoutGuide, .top),
+													 Top(20).to(logo, .bottom),
 													 Height(50))
 	}
 	

@@ -6,12 +6,14 @@
 //  Copyright © 2019 Max Petrenko. All rights reserved.
 //
 import Foundation
+import RxSwift
 
 class HomePresenter {
 	private weak var view: HomeViewType?
 	private var navigator: HomeNavigator!
 	private var postService: PostService!
 	private var userService: UserService!
+	private let disposeBag = DisposeBag()
 	
 	init(navigator: HomeNavigator, postService: PostService, userService: UserService) {
 		self.navigator = navigator
@@ -22,7 +24,21 @@ class HomePresenter {
 	// MARK: - private
 
 	private func handle(error: Error) {
-		debugPrint(error.localizedDescription)
+		view?.show(message: error.localizedDescription)
+	}
+
+	private func subscribe() {
+		postService.trigger.subscribe(onNext: { event in
+			self.updateView()
+		})
+		.disposed(by: disposeBag)
+	}
+
+	private func updateView() {
+		postService.getPosts { [weak self] posts, error in
+			guard nil == error else { self?.handle(error: error!); return }
+			self?.view?.update(collection: posts)
+		}
 	}
 }
 
@@ -32,10 +48,8 @@ extension HomePresenter: HomePresenterType {
 	}
 
 	func viewIsReady() {
-		postService.getPosts { [weak self] posts, error in
-			guard nil == error else { self?.handle(error: error!); return }
-			self?.view?.update(collection: posts)
-		}
+		subscribe()
+		updateView()
 	}
 
 	func signOut() {
@@ -44,6 +58,10 @@ extension HomePresenter: HomePresenterType {
 	}
 
 	func imagePicked(data: Data) {
-		debugPrint(data)
+		navigator.navigate(to: .createPost(imgData: data))
+	}
+
+	func refresh() {
+		updateView()
 	}
 }

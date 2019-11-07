@@ -29,9 +29,9 @@ public class BaseViewController: UIViewController {
 // ------ setup ui -------
 	public override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .white
+		view.backgroundColor = .SLBlack
 		self.setupUI()
 	}
 
-	internal func setupUI() {	}
+	internal func setupUI() {}
 }

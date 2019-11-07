@@ -13,5 +13,8 @@ class ProvidersAssembly: Assembly {
 		container.register(PostProvider.self) { _ in
 			PostProviderImpl()
 		}
+		container.register(StorageProvider.self) { _ in
+			StorageProviderImpl()
+		}
 	}
 }

@@ -18,3 +18,11 @@
 "from_library" = "из медиатеки";
 "take_a_photo" = "сделать снимок";
 "cancel" = "отмена";
+"create_post" = "добавить публикацию";
+"title_placeholder" = "введите название публикации";
+"done" = "готово";
+
+// Errors
+"error_create_post_empty_title" = "название публикации не может быть пустым";
+"error_create_post_empty_image" = "публикация должна содержать изображение";
+"error_create_post_empty_user" = "для публикации не указан владелец";

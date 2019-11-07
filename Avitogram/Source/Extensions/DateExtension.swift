@@ -12,4 +12,8 @@ extension Date {
 	public var dd．MM．yy: String {
 		return DateFormatter.dd．MM．yy.string(from: self)
 	}
+
+	public var hh．mm: String {
+		return DateFormatter.hh．mm.string(from: self)
+	}
 }

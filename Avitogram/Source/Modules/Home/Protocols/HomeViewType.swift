@@ -6,7 +6,7 @@
 //  Copyright © 2019 Max Petrenko. All rights reserved.
 //
 
-protocol HomeViewType: class {
+protocol HomeViewType: BaseViewType {
 	func set(presenter: HomePresenterType)
 	func update(collection: [Post])
 }

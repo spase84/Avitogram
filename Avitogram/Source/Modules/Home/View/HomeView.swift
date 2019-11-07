@@ -11,7 +11,9 @@ import EasyPeasy
 import RxSwift
 import RxCocoa
 
-protocol HomeViewDelegate: class {}
+protocol HomeViewDelegate: class {
+	func refresh()
+}
 
 final class HomeView: BaseView {
 	private weak var delegate: HomeViewDelegate?
@@ -19,15 +21,21 @@ final class HomeView: BaseView {
 	
 	// MARK: - subviews
 
-	private var tableView: UITableView = {
+	private let tableView: UITableView = {
 		let table = UITableView()
 		table.register(PostCell.self, forCellReuseIdentifier: PostCell.identifier)
 		table.separatorStyle = .none
-		table.backgroundColor = .white
+		table.backgroundColor = .clear
 		table.tableFooterView = UIView()
 		table.showsVerticalScrollIndicator = false
 		table.showsHorizontalScrollIndicator = false
 		return table
+	}()
+
+	private let refresher: UIRefreshControl = {
+		let refreshControl = UIRefreshControl()
+		refreshControl.tintColor = .SLDullYellow
+		return refreshControl
 	}()
 
 	// MARK: - inits
@@ -43,12 +51,15 @@ final class HomeView: BaseView {
 	// MARK: - methods
 	func prepareView() {
 		addSubview(tableView)
-		tableView.easy.layout(Edges())
+		tableView.easy.layout(Edges(), Bottom(10))
 		bindTable()
+		refresher.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+		tableView.refreshControl = refresher
 	}
 
 	func update(collection: [Post]) {
 		data.onNext(collection)
+		refresher.endRefreshing()
 	}
 
 	// MARK: - private
@@ -57,5 +68,11 @@ final class HomeView: BaseView {
 		data.bind(to: tableView.rx.items(cellIdentifier: PostCell.identifier, cellType: PostCell.self)) { _, post, cell in
 			cell.value = post
 		}.disposed(by: disposeBag)
+	}
+
+	// MARK: - actions
+
+	@objc private func refreshAction() {
+		delegate?.refresh()
 	}
 }
