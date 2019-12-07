@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import ImageSource
 
 struct Post {
 	var title: String = ""
@@ -15,7 +16,7 @@ struct Post {
 	var userId: String?
 	var imageName: String?
 
-	var image: Data?
+	var image: ImageSource?
 	var reference: StorageReference?
 
 	enum Fields: String {

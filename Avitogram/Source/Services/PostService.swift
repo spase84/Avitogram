@@ -37,13 +37,16 @@ final class PostServiceImpl: PostService {
 			return completion(error)
 		}
 		guard let imgData = post.image else { return completion(Post.ValidationError.imageEmpty) }
-		storageService.create(data: imgData) { name, error in
-			guard nil == error else { return completion(error) }
-			var post = post
-			post.imageName = name
-			self.provider.create(post: post) { error in
-				self.trigger.onNext(.saved)
-				completion(error)
+		imgData.fullResolutionImageData { data in
+			guard let imgData = data else { return }
+			self.storageService.create(data: imgData) { name, error in
+				guard nil == error else { return completion(error) }
+				var post = post
+				post.imageName = name
+				self.provider.create(post: post) { error in
+					self.trigger.onNext(.saved)
+					completion(error)
+				}
 			}
 		}
 	}

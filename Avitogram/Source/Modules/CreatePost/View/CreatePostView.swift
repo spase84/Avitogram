@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+import ImageSource
 
 protocol CreatePostViewDelegate: class {
 	func titleUpdated(text: String)
@@ -61,8 +62,10 @@ final class CreatePostView: BaseView {
 		titleField.becomeFirstResponder()
 	}
 
-	func set(imageData: Data) {
-		imageView.image = UIImage(data: imageData)
+	func set(image: ImageSource) {
+		DispatchQueue.main.async {
+			self.imageView.setImage(fromSource: image)
+		}
 	}
 
 	func freeze() {

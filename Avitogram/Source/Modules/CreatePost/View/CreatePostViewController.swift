@@ -9,6 +9,7 @@
 import UIKit
 import Toast_Swift
 import SVProgressHUD
+import ImageSource
 
 class CreatePostViewController: BaseViewController {
 	var presenter: CreatePostPresenterType?
@@ -52,11 +53,11 @@ extension CreatePostViewController: CreatePostViewType {
 	func set(presenter: CreatePostPresenterType) {
 		self.presenter = presenter
 	}
-	
-	func set(imageData: Data) {
-		(view as? CreatePostView)?.set(imageData: imageData)
+
+	func set(image: ImageSource) {
+		(view as? CreatePostView)?.set(image: image)
 	}
-	
+
 	func show(message: String) {
 		view.makeToast(message, duration: 3.0, position: .top)
 	}

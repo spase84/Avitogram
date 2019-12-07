@@ -11,6 +11,7 @@ protocol HomePresenterType {
 	func attach(view: HomeViewType)
 	func viewIsReady()
 	func signOut()
-	func imagePicked(data: Data)
+	func pickImage()
 	func refresh()
+	func profile()
 }
