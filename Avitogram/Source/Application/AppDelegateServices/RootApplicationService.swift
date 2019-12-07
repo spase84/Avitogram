@@ -19,7 +19,8 @@ final class RootApplicationService: NSObject, ApplicationService {
 		ProvidersAssembly(),
 		GuestAssembly(),
 		HomeAssembly(),
-		CreatePostAssembly()
+		CreatePostAssembly(),
+		ProfileAssembly()
 	]
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {

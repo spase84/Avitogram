@@ -6,10 +6,11 @@
 //  Copyright © 2019 Max Petrenko. All rights reserved.
 //
 import Foundation
+import ImageSource
 
 protocol CreatePostViewType: class {
 	func set(presenter: CreatePostPresenterType)
-	func set(imageData: Data)
+	func set(image: ImageSource)
 	func show(message: String)
 	func unfreeze()
 }

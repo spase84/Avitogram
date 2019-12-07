@@ -21,6 +21,9 @@
 "create_post" = "добавить публикацию";
 "title_placeholder" = "введите название публикации";
 "done" = "готово";
+"profile" = "профиль";
+"save" = "сохранить";
+"username" = "имя пользователя";
 
 // Errors
 "error_create_post_empty_title" = "название публикации не может быть пустым";

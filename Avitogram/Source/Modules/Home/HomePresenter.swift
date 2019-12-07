@@ -7,6 +7,7 @@
 //
 import Foundation
 import RxSwift
+import ImageSource
 
 class HomePresenter {
 	private weak var view: HomeViewType?
@@ -57,11 +58,18 @@ extension HomePresenter: HomePresenterType {
 		(AppService.getAppDelegate() as? AppDelegate)?.reloadRootScreen()
 	}
 
-	func imagePicked(data: Data) {
-		navigator.navigate(to: .createPost(imgData: data))
-	}
-
 	func refresh() {
 		updateView()
+	}
+
+	func profile() {
+		navigator.navigate(to: .profile)
+	}
+
+	func pickImage() {
+		navigator.navigate(to: .showPicker(completion: { [weak self] items in
+			guard let item = items.first else { return }
+			self?.navigator.navigate(to: .createPost(imgItem: item))
+		}))
 	}
 }

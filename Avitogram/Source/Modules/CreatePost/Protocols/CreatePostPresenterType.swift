@@ -6,9 +6,10 @@
 //  Copyright © 2019 Max Petrenko. All rights reserved.
 //
 import Foundation
+import ImageSource
 
 protocol CreatePostPresenterType {
 	func viewIsReady()
-	func set(imgData: Data)
+	func set(imageSource: ImageSource)
 	func done(title: String)
 }

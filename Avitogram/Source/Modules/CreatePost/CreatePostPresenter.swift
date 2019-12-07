@@ -6,6 +6,7 @@
 //  Copyright © 2019 Max Petrenko. All rights reserved.
 //
 import Foundation
+import ImageSource
 
 class CreatePostPresenter {
 	private weak var view: CreatePostViewType?
@@ -22,13 +23,13 @@ class CreatePostPresenter {
 
 extension CreatePostPresenter: CreatePostPresenterType {
 	func viewIsReady() {
-		if let data = post.image {
-			view?.set(imageData: data)
+		if let image = post.image {
+			view?.set(image: image)
 		}
 	}
 
-	func set(imgData: Data) {
-		post.image = imgData
+	func set(imageSource: ImageSource) {
+		post.image = imageSource
 	}
 
 	func done(title: String) {
